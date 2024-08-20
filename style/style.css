@@ -1,26 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+*{box-sizing: border-box;
+margin: 0px;
+}
 
 body {
     font-family:Inter, sans-serif;
     background-color: #f0f4f8;
-    margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1440px;
-    height: 1024px;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+   
 }
 
 .contenido {
     display: flex;
-    background-color: white;
+    background-color: #F3F5FC;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 1200px;
-    height: 944px;
-    gap: 120px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    justify-content: space-around;
 }
 
 
@@ -30,25 +33,28 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 400px;
+    width: 70%;
     box-sizing: border-box;
+    background-color: #F3F5FC;
 }
 
 .logo {
-    width: 48px;
-    height: 120px;
+    width: 40px;
+    height: 50px;
     margin-bottom: 80px;
 }
 
 .entradaTexto textarea {
-    width: 100%;
+    width: 70%;
     height: 669px;
     margin-bottom: 16px;
     border:none;
     padding: 10px;
     box-sizing: border-box;
     resize: none;
-    background-color: white;
+    background-color: #F3F5FC;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
 }
 
 .nota {
@@ -94,20 +100,60 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
+    width: 25%;
     box-sizing: border-box;
     justify-content: center;
-    background-color: #f0f4f8;
+    background-color: white;
 }
 
-.salidaTexto img {
+.salidaTexto textarea{
     width: 100%;
-    height: 35%;
-    margin-bottom: 32px;
+    height: 700px;
+    margin-bottom: 50px;
+    border:none;
+    padding: 15px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: white;
 }
 
 .salidaTexto p {
     text-align: center;
     color: #6c757d;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
+
+.buscar{
+height: 330px;
+width: 330px;
+margin-bottom: 20px;
+}
+
+#resultado{
+    display: none;
+}
+
+#Copiar{
+    display: none;
+    width: 328px;
+    height: 67px;
+    padding: 10px;
+    margin-top: 130px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: #D8DFE8;
+    color: #6c757d;
+}
+
+
+
+
+
+footer{
+text-align: center;
+}
+
+
+
+/* crear un evento que vendria hcer focus sobre el texttarea de entrada para borrar lo que ya tenga como valor */

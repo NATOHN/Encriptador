@@ -1,23 +1,50 @@
-document.getElementById('encryptBtn').addEventListener('click', function() {
-    let mensaje = document.getElementById('mensaje').value;
-    if (mensaje) {
-        let encryptedMensaje = btoa(mensaje);
-        alert('Mensaje encriptado: ' + encryptedMensaje);
-    } else {
-        alert('Por favor, ingrese un mensaje para encriptar.');
-    }
-});
+const mensajeEntrada = document.getElementById(`mensaje`)
 
-document.getElementById('decryptBtn').addEventListener('click', function() {
-    let mensaje = document.getElementById('mensaje').value;
-    if (mensaje) {
-        try {
-            let decryptedMensaje = atob(mensaje);
-            alert('Mensaje desencriptado: ' + decryptedMensaje);
-        } catch (e) {
-            alert('El mensaje ingresado no es válido para desencriptar.');
-        }
-    } else {
-        alert('Por favor, ingrese un mensaje para desencriptar.');
-    }
-});
+const btnEncriptar = document.getElementById(`encryptBtn`)
+
+const btnDesencriptar = document.getElementById(`decryptBtn`)
+
+const resultado = document.getElementById(`resultado`)
+
+const boxSinTexto = document.getElementById(`boxSinTexto`)
+
+const copiar = document.getElementById(`Copiar`)
+
+let message="";
+
+
+btnEncriptar.addEventListener('click', function() {
+    message=mensajeEntrada.value
+        let encryptedMessage = message
+            .replace(/e/g, "enter")
+            .replace(/i/g, "imes")
+            .replace(/a/g, "ai")
+            .replace(/o/g, "ober")
+            .replace(/u/g, "ufat");
+            console.log("Esto es mensaje", encryptedMessage)
+            boxSinTexto.style.display="none"
+            resultado.style.display="block"
+            copiar.style.display="block"
+            resultado.value = encryptedMessage
+        //return encryptedMessage;
+    });
+    
+
+btnDesencriptar.addEventListener('click', function() {
+    message=mensajeEntrada.value
+        let decryptedMessage = message
+            .replace(/enter/g, "e")
+            .replace(/imes/g, "i")
+            .replace(/ai/g, "a")
+            .replace(/ober/g, "o")
+            .replace(/ufat/g, "u");
+            boxSinTexto.style.display="none"
+            resultado.style.display="block"
+            copiar.style.display="block"
+            resultado.value = decryptedMessage
+        return decryptedMessage;  
+    });
+
+copiar.addEventListener(`click`, function() {
+    navigator.clipboard.writeText(resultado.value)
+})

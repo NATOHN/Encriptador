@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptar/Desencriptar Mensajes</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
-    <div class="contenido">
+    <main class="contenido">
         <div class="entradaTexto">
             <img src="./assets/Vector.png" alt="logo" class="logo">
             <textarea id="mensaje" placeholder="Ingrese el texto aquí"></textarea>
@@ -15,15 +17,27 @@
                 <span class="icono">!</span>
                 <span>Solo letras minúsculas y sin acentos</span>
             </div>
-            <button id="encryptBtn">Encriptar</button>
-            <button id="decryptBtn">Desencriptar</button>
+            <div>
+                <button id="encryptBtn">Encriptar</button>
+                <button id="decryptBtn">Desencriptar</button>
+            </div>
+
         </div>
-        <div class="salidaTexto">
-            <img src="./assets/Muñeco.png" alt="ilustracion">
-            <p>Ningún mensaje fue encontrado</p>
-            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-        </div>
-    </div>
-    <script src="./app.js"></script>
+            <div class="salidaTexto">
+                <textarea id="resultado" readonly></textarea>
+                <div id="boxSinTexto">
+                    <img class="buscar" src="./assets/Muñeco.png" alt="ilustracion">
+                    <p>Ningún mensaje fue encontrado</p>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <button id="Copiar">Copiar</button>
+            </div>
+        
+        
+    </main>
+
+    <footer>Desarrollado Por Nato</footer>
+    
 </body>
+<script src="./app.js"></script>
 </html>
