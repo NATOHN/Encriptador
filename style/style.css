@@ -91,16 +91,22 @@ body {
     cursor: pointer;
 }
 
+
+.botones{
+    margin-top: 1px;
+}
+
 #encryptBtn {
     background-color: #0A3871;
     color: white;
-    margin-top: 1px;
+    
+    
 }
 
 #decryptBtn {
     background-color: #D8DFE8;
     color: gray;
-    margin-top: 1px;
+   
 }
 
 .salidaTexto {
@@ -113,9 +119,8 @@ body {
     justify-content: center;
     background-color: white;
     border-radius: 32px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-right: 50px;
-    
 }
 
 .salidaTexto textarea{
@@ -182,3 +187,6 @@ font-family: inter, sans-serif;
 font-size: 24px;
 font-weight: 400;
 }
+
+
+
