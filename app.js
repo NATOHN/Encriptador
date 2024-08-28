@@ -9,7 +9,7 @@ const copiar = document.getElementById('Copiar');
 let message = "";
 
 
-//Realizamos el proceso de encriptacion
+//Realizamos el proceso de encriptaciòn
 btnEncriptar.addEventListener('click', function () {
     message = mensajeEntrada.value;
     let encryptedMessage = message

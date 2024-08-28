@@ -179,7 +179,7 @@ footer {
     font-weight: 400;
 }
 
-/* Responsividad */
+/*Responsividad*/
 @media (max-width: 1024px) {
     .contenido {
         flex-direction: row;
